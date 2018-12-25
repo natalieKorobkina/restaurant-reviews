@@ -25,16 +25,18 @@ self.addEventListener('install', e => {
           'images/8.jpg',
           'images/9.jpg',
           'images/10.jpg',
+          "images/icons-192.png",
+          "images/icons-512.png",
           'favicon.ico',
           'data/restaurants.json',
           'css/styles.css',
           'js/dbhelper.js',
           'js/main.js',
           'js/restaurant_info.js',
-          './',
           'index.html',
           'restaurant.html',
-          'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js'
+          'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
+          'manifest.json'
         ]
       );
     })
