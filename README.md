@@ -1,33 +1,45 @@
-# Mobile Web Specialist Certification Course
+# Project - Restaurant Reviews
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
 
-## Project Overview: Stage 1
+### Overview
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+This code was designed for Restaurant Reviews web application. It has the following features:
+A fully responsive layout
+Responsive images, both for sizing and art direction
+A restaurant listings page
+A restaurant info page
+Service worker implementation to allow for viewing previously browsed pages while offline
+Offline application capabilities utilizing the caches 
+All other rubric requirements
 
-### Specification
+### Instructions
+This project is a simple single-page application that allows users to select a certain area in New York City and view a list of nearby restaurants. For each restaurant in the application, the application includes a map highlighting the restaurant's location (powered by Mapbox), a set of recent user reviews.
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality.
+To run this application on your browser, you'll need to download the following files (all included within this repository!):
 
-### Project Rubric
+1.index.html, restaurants.html
+2.sw.js
+3.css/styles.css
+4.js/main.js
+5.js/dbhelper.js
+6.js/restaurant_info.js
+7.img folder. All included .jpg and .png files (needed to load the restaurant images).
+8.data/restaurants.json (needed to pull restaurant list and detail)
+9.manifest.json
+Once all the above files have been loaded onto your computer, start up a simple HTTP server to serve up the site files on your local computer. Use an extension "Live server" of Visual Studio Code.
 
-Your project will be evaluated by a Udacity code reviewer according to the [Restaurant Reviews project rubric](https://review.udacity.com/#!/rubrics/1090/view). Please review for detailed project requirements. The rubric should be a resource you refer to periodically to make sure your project meets specifications.
+Note that the browser must support ES6 (due to usage of the 'class' keyword). If your browser does not support the ES6 features in this application, you can use a JS transpiler such as Babel (https://babeljs.io/) to transpile the code to ES5.
 
-### What do I do from here?
+This repository also uses leafletjs with Mapbox. I am currently using my own Mapbox key to power the project, but if you choose to clone or download this repo you should replace my Mapbox key with your own. Mapbox is free to use, and does not require any payment information.
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer.
+As this apllication contains manifest, you can install it as PWA (Prograssive Web Application) via your browser menu.
 
-    * In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
-   * Note -  For Windows systems, Python 3.x is installed as `python` by default. To start a Python 3.x server, you can simply enter `python -m http.server 8000`.
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+If you are having issues loading the "restaurant details" pages or utilizing the service worker, try clearing your browser cache and restarting the project.
 
-## Leaflet.js and Mapbox:
+### Contributing
+Starter HTML / CSS / JS code and default artwork (including images, styling, and symbols) taken from the Udacity classroom repository.
+Since this project is being used as an evaluation for the Udacity FEND, at this time I am NOT accepting pull requests. This may change in the future.
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.
+### Licenses
 
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future-proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write.
+This project is freely available for usage. If you are a fellow Udacity FEND student, feel free to look at this project for guidance but please do not utilize any of this code in a way that violates Udacity's Honor Code / plagiarism guidelines.

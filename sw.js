@@ -28,7 +28,6 @@ self.addEventListener('install', e => {
           'images/10.jpg',
           'images/icons-192.png',
           'images/icons-512.png',
-          'favicon.ico',
           'data/restaurants.json',
           'css/styles.css',
           'js/dbhelper.js',
