@@ -1,13 +1,31 @@
 const staticCache = "restaurant-rev-cache-v1"
 
 self.addEventListener('fetch', (e) => {
+     
   e.respondWith(
-    caches.match(e.request)
-    .then(function (response) {
-      return response || fetch(e.request)
+    caches.match(e.request) //check request for match
+    .then((response) => {
+      if (response) { // if data already exists
+				return response;
+			}
+      return fetch(e.request) // if not - fetch it from network
+      .then(networkResponse => { // another response
+				if (networkResponse.status === 404) { // just for error catch
+					return;
+				}
+        return caches.open(staticCache) // add it to cache
+        .then(cache => {
+					cache.put(e.request.url, networkResponse.clone());
+					return networkResponse; //return that was fetched to the page 
+				})
+			})
+		}).catch(error => { //return error if any
+			console.log('Error:', error);
+			return;
     })
   );
 });
+
 
 self.addEventListener('install', e => {
   e.waitUntil(
