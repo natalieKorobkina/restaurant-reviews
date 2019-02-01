@@ -1,3 +1,11 @@
+Used Web technologies: 
+- HTML, 
+- CSS, 
+- JavaScript,
+- PWA, 
+- service worker, 
+- Offline first application concept.
+
 # Project - Restaurant Reviews
 ---
 
@@ -17,15 +25,15 @@ This project is a simple single-page application that allows users to select a c
 
 To run this application on your browser, you'll need to download the following files (all included within this repository!):
 
-1.index.html, restaurants.html
-2.sw.js
-3.css/styles.css
-4.js/main.js
-5.js/dbhelper.js
-6.js/restaurant_info.js
-7.img folder. All included .jpg and .png files (needed to load the restaurant images).
-8.data/restaurants.json (needed to pull restaurant list and detail)
-9.manifest.json
+1. index.html, restaurants.html
+2. sw.js
+3. css/styles.css
+4. js/main.js
+5. js/dbhelper.js
+6. js/restaurant_info.js
+7. img folder. All included .jpg and .png files (needed to load the restaurant images).
+8. data/restaurants.json (needed to pull restaurant list and detail)
+9. manifest.json
 Once all the above files have been loaded onto your computer, start up a simple HTTP server to serve up the site files on your local computer. Use an extension "Live server" of Visual Studio Code.
 
 Note that the browser must support ES6 (due to usage of the 'class' keyword). If your browser does not support the ES6 features in this application, you can use a JS transpiler such as Babel (https://babeljs.io/) to transpile the code to ES5.
@@ -35,10 +43,6 @@ This repository also uses leafletjs with Mapbox. I am currently using my own Map
 As this apllication contains manifest, you can install it as PWA (Prograssive Web Application) via your browser menu.
 
 If you are having issues loading the "restaurant details" pages or utilizing the service worker, try clearing your browser cache and restarting the project.
-
-### Contributing
-Starter HTML / CSS / JS code and default artwork (including images, styling, and symbols) taken from the Udacity classroom repository.
-Since this project is being used as an evaluation for the Udacity FEND, at this time I am NOT accepting pull requests. This may change in the future.
 
 ### Licenses
 
